@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8d5a5a15c.js" crossorigin="anonymous"></script>
+    <title>Diary</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+    $(function(){
+      // #で始まるアンカーをクリックした場合に処理
+      $('a[href^=#]').click(function() {
+        // スクロールの速度
+        var speed = 400; // ミリ秒
+        // アンカーの値取得
+        var href= $(this).attr("href");
+        // 移動先を取得
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // 移動先を数値で取得
+        var position = target.offset().top;
+        // スムーススクロール
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        Diary
+      </a>
+      <div class="social">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="#2016">2016</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#2017">2017</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#2018">2018</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#2019">2019</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#2022">2022</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="step-box" id="2016">
+        <div class="step-img1"></div>
+        <h3 class="title" >熊本城</h3>
+        <p class="text">
+          2016.3.24
+        </p>
+      </div>
+
+      <div class="step-box" id="2017">
+        <div class="step-img2"></div>
+        <h3 class="title">ビッグベン</h3>
+        <p class="text">
+          2017.1.1
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img3"></div>
+        <h3 class="title">グランドキャニオン</h3>
+        <p class="text">
+          2017.8.21
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img4"></div>
+        <h3 class="title">ディズニー・カリフォルニア</h3>
+        <p class="text">
+          2017.8.29
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img5"></div>
+        <h3 class="title">箱根</h3>
+        <p class="text">
+          2017.12.30
+        </p>
+      </div>
+
+      <div class="step-box" id="2018">
+        <div class="step-img6"></div>
+        <h3 class="title">ロットネスト島</h3>
+        <p class="text">
+          2018.3.30
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img7"></div>
+        <h3 class="title">ナイアガラの滝</h3>
+        <p class="text">
+          2018.8.15
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img8"></div>
+        <h3 class="title">モン・サン＝ミシェル</h3>
+        <p class="text">
+          2018.8.20
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img9"></div>
+        <h3 class="title">USJ</h3>
+        <p class="text">
+          2018.12.18
+        </p>
+      </div>
+
+      <div class="step-box" id="2019">
+        <div class="step-img10"></div>
+        <h3 class="title">宮古島</h3>
+        <p class="text">
+          2019.5.3
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img11"></div>
+        <h3 class="title">平和祈念像</h3>
+        <p class="text">
+          2019.10.30
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img12"></div>
+        <h3 class="title">太宰府天満宮</h3>
+        <p class="text">
+          2019.11.1
+        </p>
+      </div>
+
+      <div class="step-box" id="2022">
+        <div class="step-img13"></div>
+        <h3 class="title">湯沢中里スノーリゾート</h3>
+        <p class="text">
+          2022.2.2
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img14"></div>
+        <h3 class="title">清水寺</h3>
+        <p class="text">
+          2022.3.30
+        </p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-img15"></div>
+        <h3 class="title">金沢21世紀美術館</h3>
+        <p class="text">
+          2022.4.7
+        </p>
+      </div>
+
+    </main>
+    <footer><p class="footer-text">© memory of my travel</p></footer>
+  </body>
+</html>
